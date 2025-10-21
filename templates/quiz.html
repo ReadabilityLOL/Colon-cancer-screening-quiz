@@ -1,0 +1,53 @@
+{% include 'header.html' %}
+
+ <form>
+  
+   <p> Do you have a family history of Colon Cancer? </p>
+  <input type="radio" id="yes" name="family_history" value="Yes">
+  <label for="Yes">Yes</label><br>
+  <input type="radio" id="no" name="family_history" value="No">
+  <label for="No">No</label><br>
+
+   <p> Are you a smoker or have you smoked in the past?</p>
+  <input type="radio" id="yes" name="smoker" value="Yes">
+  <label for="Yes">Yes</label><br>
+  <input type="radio" id="no" name="smoker" value="No">
+  <label for="No">No</label><br>
+
+   <p> Do you drink alcohol?</p>
+  <input type="radio" id="yes" name="drink" value="Yes">
+  <label for="Yes">Yes</label><br>
+  <input type="radio" id="no" name="drink" value="No">
+  <label for="No">No</label><br>
+
+   <p> Do you have diabetes? </p>
+  <input type="radio" id="yes" name="diabetes" value="Yes">
+  <label for="Yes">Yes</label><br>
+  <input type="radio" id="no" name="diabetes" value="No">
+  <label for="No">No</label><br>
+
+   <p> What is the minimum amount of years you can go between screenings? </p>
+  <input type="range" value="5" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+  <output>5</output>
+
+   <p> Are you okay with being sedated for your test? </p>
+  <input type="radio" id="yes" name="sedation" value="Yes">
+  <label for="Yes">Yes</label><br>
+  <input type="radio" id="no" name="sedation" value="No">
+  <label for="No">No</label><br>
+
+   <p> Are you okay with changing your diet or fasting before your screening? </p>
+  <input type="radio" id="yes" name="fasting" value="Yes">
+  <label for="Yes">Yes</label><br>
+  <input type="radio" id="no" name="fasting" value="No">
+  <label for="No">No</label><br>
+
+   <p> Would you prefer to stay at home for your screening? </p>
+  <input type="radio" id="yes" name="home" value="Yes">
+  <label for="Yes">Yes</label><br>
+  <input type="radio" id="no" name="home" value="No">
+  <label for="No">No</label><br>
+
+  <p></p>
+  <input type="submit" value="Submit">
+</form>

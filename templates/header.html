@@ -1,11 +1,14 @@
 <header>
-  <h1>Welcome to Our Site!</h1>
   <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/quiz">Quiz</a></li>
+      <h1 style="display:inline">Welcome to Our Site!</h1>
+      <span class="links">
+      <a href="/">Home</a>
+      <a href="/quiz">Quiz</a>
+      </span>
     </ul>
   </nav>
+
+<hr>
 </header>
 
 <style>
@@ -22,6 +25,24 @@
 
 * {
   font-family: 'proxima_nova_rgregular', Helvetica, Arial, sans-serif;
+}
+
+body{
+  margin-left:5%;
+  margin-right:5%;
+}
+
+nav .links{
+  float:right;
+}
+
+nav .links a{
+  font-size:4ch;
+  margin-right:10px;
+}
+
+nav h1{
+  font-size:4ch;
 }
 
 .container{
@@ -42,3 +63,4 @@
 }
 </style>
 <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.7/dist/htmx.min.js" integrity="sha384-ZBXiYtYQ6hJ2Y0ZNoYuI+Nq5MqWBr+chMrS/RkXpNzQCApHEhOt2aY8EJgqwHLkJ" crossorigin="anonymous"></script>
