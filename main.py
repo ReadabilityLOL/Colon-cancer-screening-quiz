@@ -20,26 +20,29 @@ def results():
         alcohol = parse(request.form.get("drink"))
         diabetes = parse(request.form.get("diabetes"))
         minYears = int(request.form.get("years"))
-        sedated = parse(request.form.get("sedation"))
+        #sedated = parse(request.form.get("sedation"))
         diet = parse(request.form.get("fasting"))
         home = parse(request.form.get("home"))
 
-        return superadvancedaimodel(history,smoker,alcohol,diabetes,minYears,sedated,diet,home)
+        return other_super_advanced_parser(superadvancedaimodel(history,smoker,alcohol,diabetes,minYears,diet,home))
     return render_template("results.html")
 
 
-def superadvancedaimodel(history,smoker,alcohol,diabetes,minYears,sedated,diet,home):
+def superadvancedaimodel(history,smoker,alcohol,diabetes,minYears,diet,home):
     if history:
-        return "Colonoscopy"
+        return "colonoscopy"
     if smoker and alcohol or smoker and diabetes or alcohol and diabetes or alcohol and smoker and diabetes:
-        return "Colonoscopy"
+        return "colonoscopy"
     if smoker or alcohol or diabetes:
         if diet:
-            return "Virtual Colonoscopy"
+            return "virtualcolonoscopy"
         if minYears == 1:
-            return "Fecal Occult Blood Test"
+            return "fecaloccultbloodtest"
         else:
-            return "Stool DNA test"
+            return "stooldnatest"
     if home:
-        return "Stool DNA test"
-    return "Colonoscopy"
+        return "stooldnatest"
+    return "colonoscopy"
+
+def other_super_advanced_parser(string):
+    return render_template(string+".html")
