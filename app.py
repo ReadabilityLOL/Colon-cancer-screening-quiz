@@ -46,3 +46,6 @@ def superadvancedaimodel(history,smoker,alcohol,diabetes,minYears,diet,home):
 
 def other_super_advanced_parser(string):
     return render_template(string+".html")
+
+if __name__ == "__main__":
+    app.run()
